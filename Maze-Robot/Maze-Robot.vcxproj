@@ -108,7 +108,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="status_lights.h" />
     <ClInclude Include="__vm\.Maze-Robot.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="status_lights.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
