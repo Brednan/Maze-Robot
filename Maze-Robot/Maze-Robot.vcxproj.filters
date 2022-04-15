@@ -24,9 +24,15 @@
     <ClInclude Include="status_lights.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="obstacle_sensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="status_lights.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="obstacle_sensor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

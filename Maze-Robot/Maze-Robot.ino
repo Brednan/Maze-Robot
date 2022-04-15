@@ -5,28 +5,17 @@
 */
 
 // the setup function runs once when you press reset or power the board
+#include "obstacle_sensor.h"
 #include "status_lights.h"
 
-//pin 2 = yellow LED
-//pin 4 = red LED
-//pin 7 = green LED
-Status_Lights light_controls = Status_Lights(7, 4, 2);
+int echo_pin = 2,
+int trig_pin = 3;
+ObstacleSensor obstacle_sensor = ObstacleSensor(echo_pin, trig_pin);
 void setup() {
 	
 }
 
 // the loop function runs over and over again until power down or reset
-void loop() {
-	
-	light_controls.turn_off_lights();
-	delay(100);
-
-	light_controls.object_detected();
-	delay(2000);
-
-	light_controls.scanning_status();
-	delay(2000);
-
-	light_controls.moving_status();
-	delay(2000);
+void loop(){
+	obstacle_sensor.check_for_obstacle();
 }
