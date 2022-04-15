@@ -13,6 +13,7 @@
 #endif
 
 class Status_Lights {
+public:
 	int GREEN_PIN;
 	int RED_PIN;
 	int YELLOW_PIN;
@@ -26,4 +27,7 @@ class Status_Lights {
 		pinMode(YELLOW_PIN, INPUT);
 	}
 	void turn_off_lights();
+	void moving_status();
+	void object_detected();
+	void scanning_status();
 };
