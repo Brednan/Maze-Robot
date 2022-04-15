@@ -6,7 +6,11 @@
 
 // the setup function runs once when you press reset or power the board
 #include "status_lights.h"
-Status_Lights light_controls = Status_Lights(0, 1, 2);
+
+//pin 2 = yellow LED
+//pin 4 = red LED
+//pin 7 = green LED
+Status_Lights light_controls = Status_Lights(7, 4, 2);
 void setup() {
 	
 }
