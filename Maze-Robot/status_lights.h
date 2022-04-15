@@ -13,7 +13,6 @@
 #endif
 
 class Status_Lights {
-public:
 	int GREEN_PIN;
 	int RED_PIN;
 	int YELLOW_PIN;
@@ -21,5 +20,10 @@ public:
 		GREEN_PIN = green_pin;
 		RED_PIN = red_pin;
 		YELLOW_PIN = yellow_pin;
+
+		pinMode(GREEN_PIN, INPUT);
+		pinMode(RED_PIN, INPUT);
+		pinMode(YELLOW_PIN, INPUT);
 	}
+	void turn_off_lights();
 };
