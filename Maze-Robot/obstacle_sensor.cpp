@@ -4,7 +4,7 @@
 
 #include "obstacle_sensor.h"
 
-void ObstacleSensor::check_for_obstacle() {
+bool ObstacleSensor::check_for_obstacle(int min_distance) {
 	long duration;
 
 	digitalWrite(TRIG, LOW);
@@ -18,8 +18,14 @@ void ObstacleSensor::check_for_obstacle() {
 	duration = pulseIn(ECHO, HIGH);
 	long inches = get_inches(duration);
 
-	Serial.println("Distance (Inches): " + String(inches));
 	delay(100);
+
+	if (min_distance > inches) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 long ObstacleSensor::get_inches(long duration) {

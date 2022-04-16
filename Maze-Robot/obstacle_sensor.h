@@ -25,7 +25,7 @@ public:
 		pinMode(ECHO, INPUT);
 	}
 
-	void check_for_obstacle();
+	bool check_for_obstacle(int min_distance);
 	
 	long get_inches(long duration);
 };

@@ -17,5 +17,6 @@ void setup() {
 
 // the loop function runs over and over again until power down or reset
 void loop(){
-	obstacle_sensor.check_for_obstacle();
+	bool object_detected = obstacle_sensor.check_for_obstacle(5);
+	Serial.println(String(object_detected));
 }
