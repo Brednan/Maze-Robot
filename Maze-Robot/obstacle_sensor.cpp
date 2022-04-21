@@ -18,6 +18,7 @@ bool ObstacleSensor::check_for_obstacle(int min_distance) {
 	duration = pulseIn(ECHO, HIGH);
 	long inches = get_inches(duration);
 
+	Serial.println(String(inches));
 	delay(100);
 
 	if (min_distance > inches) {
