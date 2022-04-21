@@ -8,9 +8,10 @@
 #include "obstacle_sensor.h"
 #include "status_lights.h"
 
-int echo_pin = 2,
-int trig_pin = 3;
-ObstacleSensor obstacle_sensor = ObstacleSensor(echo_pin, trig_pin);
+const int ECHO_PIN = 2;
+const int TRIG_PIN = 3;
+
+ObstacleSensor obstacle_sensor = ObstacleSensor(ECHO_PIN, TRIG_PIN);
 void setup() {
 	
 }
