@@ -5,11 +5,17 @@
 */
 
 // the setup function runs once when you press reset or power the board
+#include "color_sensor.h"
 #include "obstacle_sensor.h"
 #include "status_lights.h"
 
 const int ECHO_PIN = 2;
 const int TRIG_PIN = 3;
+const int S0 = 4;
+const int S1 = 5;
+const int S2 = 6;
+const int S3 = 7;
+const int sensorOut = 8;
 
 ObstacleSensor obstacle_sensor = ObstacleSensor(ECHO_PIN, TRIG_PIN);
 void setup() {

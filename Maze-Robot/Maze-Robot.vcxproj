@@ -108,11 +108,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="color_sensor.h" />
     <ClInclude Include="obstacle_sensor.h" />
     <ClInclude Include="status_lights.h" />
     <ClInclude Include="__vm\.Maze-Robot.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="color_sensor.cpp" />
     <ClCompile Include="obstacle_sensor.cpp" />
     <ClCompile Include="status_lights.cpp" />
   </ItemGroup>
